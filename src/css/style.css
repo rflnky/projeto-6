@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: transparent;
+}
+
+#container{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.video-container,
+.login-container{
+    flex:1;
+    padding: 1px;
+    transition: .5s ease-in-out;
+    background-image:linear-gradient(aqua,black);
+}
+
+.video-container video{
+    display: block;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    order: 1;
+    animation: efeito1 1.8s infinite alternate;
+}
+
+#sombra{
+    width: 300px;
+    height: 40px;
+    background: black;
+    margin-left: 60px;
+    filter: blur(15px);
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: efeito2 1.5s infinite alternate;
+}
+
+
+@keyframes efeito1{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px)
+    }
+}
+
+@keyframes efeito2{
+    0%{
+        transform:translateY(0) ;
+    }
+    100%{
+        transform: scale(0.85,0.85);
+    }
+}
+
+.login-container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.form-login{
+    width: 100%;
+}
+
+.form-group{
+    margin-bottom: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"]{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+#usuario{
+    margin-left: 2px;
+}
+#senha{
+    margin-left: 10px;
+}
+
+#btnEntrar{
+    padding: 10px 20px;
+    background: greenyellow;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms linear;
+    margin-left: 25%;
+}
+
+#btnEntrar:hover{
+    background: green;
+    color:#fff;
+    box-shadow: 3px 3px 3px greenyellow;
+}
+
+#btnTrocar:hover{
+    background: #fff;
+    color:#000;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+#btnTrocar{
+    padding: 10px 20px;
+    background: #555;
+    border-radius: 10px;
+    color:#fff;
+    cursor: pointer;
+}
